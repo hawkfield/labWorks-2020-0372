@@ -6,18 +6,18 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    long double fv, sv;
+    long double secondvalue, firstvalue;
     char sign, check;
     cout << "Добро пожаловать в калькулятор Дениса Лазарева!\n";   
     do { 
     cout << "Введите два числа и знак операции:\n";
-    cin >> sv >> fv >> sign; //Здесь я сначала сделал fv, а потом sv, но в кейсе перепутал, поэтому, первое число sv, а второе fv
+    cin >> firstvalue >> secondvalue >> sign;
     switch (sign) {
-    case '+': cout << sv << " + " << fv << " = " << sv + fv << endl; break;
-    case '-': cout << sv << " - " << fv << " = " << sv - fv << endl; break;
-    case '*': cout << sv << " * " << fv << " = " << sv * fv << endl; break;
-    case '/': if (fv != 0) {
-        cout << sv << " / " << fv << " = " << sv / fv << endl; break;
+    case '+': cout << firstvalue << " + " << secondvalue << " = " << firstvalue + secondvalue << endl; break;
+    case '-': cout << firstvalue << " - " << secondvalue << " = " << firstvalue - secondvalue << endl; break;
+    case '*': cout << firstvalue << " * " << secondvalue << " = " << firstvalue * secondvalue << endl; break;
+    case '/': if (secondvalue != 0) {
+        cout << firstvalue << " / " << secondvalue << " = " << firstvalue / secondvalue << endl; break;
     }
             else
     {
