@@ -5,13 +5,21 @@
 using namespace std;
 
 float power() {
-    float number, pow, counter = 1; //number число вводимое в степень, pow сама степень, counter счетчик
+    float number, counter = 1; //number число вводимое в степень, pow сама степень, counter счетчик
+    int pow;
     cout << "Введите число и степень через пробел: ";
     cin >> number >> pow;
-    for (int i = 0; i < pow; i++) {
-        counter *= number;
+    if (pow < 0) {
+        for (int i = 0; i < abs(pow); i++) {
+            counter = counter / number;
+        } 
     }
-    if (pow == 3) {
+    else {
+        for (int i = 0; i < abs(pow); i++) {
+            counter *= number;
+        }
+    }
+    if (abs(pow) == 3) {
         cout << number << " В " << pow << "-ей степени равно: " << counter;
     }
     else {
